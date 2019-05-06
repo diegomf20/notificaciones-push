@@ -15,6 +15,7 @@ function pushInit(topics) {
             }
         });
     });
+    listenPush();
 }
 
 function addTopics(topics,token) {
