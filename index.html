@@ -1,0 +1,38 @@
+<html>
+    <body>
+        <button id="btn-cerrar">
+            cerrar
+        </button>
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.9/push.js"></script>
+        <script src="push.js"></script>        
+        <script>
+            /**
+             * Inicializar Firebase
+            */
+            var firebaseConfig = {
+                apiKey: "AIzaSyA0K9tir8Bo0XrjgpM3VWx9uniIdxwGi1U",
+                authDomain: "vespro-technology.firebaseapp.com",
+                databaseURL: "https://vespro-technology.firebaseio.com",
+                projectId: "vespro-technology",
+                storageBucket: "vespro-technology.appspot.com",
+                messagingSenderId: "105524483936",
+                appId: "1:105524483936:web:0ffb9b5f64a85811"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            /**
+             *  Incializar Metodo 
+             */
+            var nombre_grupo="cuenta1";
+            pushInit(nombre_grupo);
+            listenPush(); 
+
+            $('#btn-cerrar').click(function (params) {
+               removeTopics(nombre_grupo); 
+            });
+        </script>
+    </body>
+</html>
